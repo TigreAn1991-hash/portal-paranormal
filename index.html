@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Portal Paranormal</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    color: white;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    background: rgba(0,0,0,0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px purple;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background: purple;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🔮 Portal Paranormal</h1>
+    <p>Si estás aquí… no es casualidad</p>
+
+    <button onclick="mensaje()">Revelar mensaje</button>
+
+    <p id="mensaje"></p>
+</div>
+
+<script>
+function mensaje() {
+    let mensajes = [
+        "Nada llega por casualidad…",
+        "Hay energías que ya te conocen…",
+        "Este es solo el inicio…",
+        "Lo que buscas también te busca…",
+        "No todos están listos para ver esto…"
+    ];
+
+    let random = Math.floor(Math.random() * mensajes.length);
+    document.getElementById("mensaje").innerText = mensajes[random];
+}
+</script>
+
+</body>
+</html>
