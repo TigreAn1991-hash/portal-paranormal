@@ -3,54 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Confirmación</title>
+<title>Confirmar</title>
 
 <style>
 body{
-background:#0b0b0b;
-color:white;
-font-family:Arial, sans-serif;
-text-align:center;
-padding:20px;
-margin:0;
+    background:#000;
+    color:white;
+    font-family:Arial;
+    text-align:center;
 }
 
 .container{
-max-width:650px;
-margin:auto;
+    max-width:650px;
+    margin:auto;
+    padding:20px;
 }
 
-.box{
-background:#111;
-padding:25px;
-border-radius:14px;
-font-size:1.3rem;
-line-height:1.8;
-box-shadow:0 0 20px rgba(0,255,180,.2);
+.card{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
 }
 
 h1{
-font-size:2rem;
-margin-bottom:15px;
+    color:#00ffcc;
 }
 
-button{
-background:#00c853;
-padding:16px;
-border:none;
-color:white;
-border-radius:12px;
-font-size:1.2rem;
-font-weight:bold;
-width:100%;
-margin-top:15px;
-cursor:pointer;
+.btn{
+    display:block;
+    background:#00c853;
+    color:white;
+    padding:15px;
+    margin:15px auto;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 .sec{
-background:#1e1e1e;
+    background:#7b2cbf;
 }
 </style>
+
 </head>
 
 <body>
@@ -59,28 +53,29 @@ background:#1e1e1e;
 
 <h1>📩 Envía tu comprobante</h1>
 
-<div class="box">
-<p>Después de pagar, envía tu comprobante para recibir el libro.</p>
+<div class="card">
 
-<p><b>Incluye:</b></p>
-<p>✔ Tu nombre</p>
-<p>✔ Captura del pago</p>
-<p>✔ Libro: Protección y Reversión</p>
+<p>Después de pagar envía:</p>
 
-<p>Una vez confirmado, recibirás tu acceso.</p>
+<p>✔ Nombre</p>
+<p>✔ Captura</p>
+<p>✔ Libro: Protección</p>
+
+<p>Recibirás el acceso después de verificar.</p>
+
 </div>
 
-<button onclick="window.open('https://wa.me/5214791950206')">
+<a class="btn" href="https://wa.me/5214791950206">
 Enviar por WhatsApp
-</button>
+</a>
 
-<button onclick="window.open('https://m.me/GarciaParanormalOficial')">
+<a class="btn" href="https://facebook.com/GarciaParanormalOficial">
 Enviar por Messenger
-</button>
+</a>
 
-<button class="sec" onclick="location.href='proteccion-pago.html'">
+<a class="btn sec" href="proteccion.html">
 ⬅ Volver
-</button>
+</a>
 
 </div>
 
