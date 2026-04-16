@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pago | El Libro de San Cipriano</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1b0b2a 0%, #09050f 45%, #000 100%);
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin:0;
+}
+.container{
+    max-width:650px;
+    margin:auto;
+}
+.card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(180,100,255,.25);
+    border-radius:18px;
+    padding:24px;
+    margin-top:20px;
+    box-shadow:0 0 18px rgba(140,60,255,.18);
+}
+h1{
+    font-size:2rem;
+    margin-bottom:16px;
+}
+p{
+    font-size:1.12rem;
+    line-height:1.7;
+}
+.dato{
+    font-size:1.28rem;
+    font-weight:bold;
+    margin:14px 0;
+    word-break:break-word;
+}
+.btn{
+    display:block;
+    width:100%;
+    max-width:520px;
+    margin:16px auto;
+    padding:16px;
+    background:#7b2cbf;
+    color:#fff;
+    text-decoration:none;
+    border-radius:14px;
+    font-size:1.08rem;
+    font-weight:bold;
+    border:none;
+}
+.btn-sec{
+    background:#51206f;
+}
+.mini{
+    opacity:.85;
+    font-size:.95rem;
+    margin-top:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>💳 Realiza tu pago</h1>
+
+<div class="card">
+    <p><strong>Beneficiario:</strong></p>
+    <div class="dato">Ángel G.</div>
+
+    <p><strong>Banco:</strong></p>
+    <div class="dato">Nu México</div>
+
+    <p><strong>CLABE interbancaria:</strong></p>
+    <div class="dato" id="clabe">638180000157997507</div>
+
+    <button class="btn" onclick="copiarClabe()">Copiar CLABE</button>
+
+    <p class="mini">
+        Realiza la transferencia por <strong>$50 MXN</strong> y después envía tu comprobante.
+    </p>
+</div>
+
+<a class="btn btn-sec" href="cipriano-confirmar.html">Ya hice la transferencia</a>
+<a class="btn btn-sec" href="cipriano.html">Volver</a>
+
+</div>
+
+<script>
+function copiarClabe() {
+  const texto = "638180000157997507";
+  navigator.clipboard.writeText(texto).then(function() {
+    alert("CLABE copiada: " + texto);
+  }, function() {
+    alert("No se pudo copiar automáticamente. Copia esta CLABE: " + texto);
+  });
+}
+</script>
+</body>
+</html>
