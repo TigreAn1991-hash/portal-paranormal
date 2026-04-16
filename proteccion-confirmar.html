@@ -2,42 +2,75 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Confirmación</title>
 
 <style>
 body{
 background:#0b0b0b;
 color:white;
-font-family:Arial;
+font-family:Arial, sans-serif;
 text-align:center;
 padding:20px;
+margin:0;
+}
+
+.container{
+max-width:650px;
+margin:auto;
+}
+
+.box{
+background:#111;
+padding:25px;
+border-radius:14px;
+font-size:1.3rem;
+line-height:1.8;
+box-shadow:0 0 20px rgba(0,255,180,.2);
+}
+
+h1{
+font-size:2rem;
+margin-bottom:15px;
 }
 
 button{
 background:#00c853;
-padding:15px;
+padding:16px;
 border:none;
 color:white;
-border-radius:10px;
-font-size:18px;
+border-radius:12px;
+font-size:1.2rem;
+font-weight:bold;
 width:100%;
 margin-top:15px;
+cursor:pointer;
+}
+
+.sec{
+background:#1e1e1e;
 }
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>📩 Envía tu comprobante</h1>
 
+<div class="box">
 <p>Después de pagar, envía tu comprobante para recibir el libro.</p>
 
-<p>Incluye:</p>
+<p><b>Incluye:</b></p>
 <p>✔ Tu nombre</p>
 <p>✔ Captura del pago</p>
 <p>✔ Libro: Protección y Reversión</p>
 
-<button onclick="window.open('https://wa.me/521XXXXXXXXXX')">
+<p>Una vez confirmado, recibirás tu acceso.</p>
+</div>
+
+<button onclick="window.open('https://wa.me/5214791950206')">
 Enviar por WhatsApp
 </button>
 
@@ -45,7 +78,11 @@ Enviar por WhatsApp
 Enviar por Messenger
 </button>
 
-<p>Una vez confirmado, recibirás tu acceso.</p>
+<button class="sec" onclick="location.href='proteccion-pago.html'">
+⬅ Volver
+</button>
+
+</div>
 
 </body>
 </html>
