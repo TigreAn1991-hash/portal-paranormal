@@ -7,12 +7,12 @@
 
 <style>
 body {
-    margin: 0;
+    background-color: #000;
+    color: white;
     font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
     text-align: center;
-    font-size: 18px;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -20,54 +20,56 @@ body {
 }
 
 h1 {
-    color: #00ffc3;
-    font-size: 28px;
+    color: #00ffcc;
+    font-size: 26px;
 }
 
-h2 {
-    font-size: 22px;
+.alert {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #00ffcc;
+    margin: 20px 0;
 }
 
 .card {
     background: #111;
     padding: 20px;
-    margin: 15px 0;
+    margin: 15px;
     border-radius: 15px;
 }
 
-img {
-    width: 100%;
-    max-width: 420px;
-    border-radius: 15px;
-    margin: 20px 0;
-    box-shadow: 0 0 25px rgba(0,255,180,.3);
-}
-
-.btn {
+.button {
     display: block;
     background: #00c853;
-    color: #fff;
-    text-decoration: none;
+    color: white;
     padding: 15px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 300px;
+    margin: 20px;
     border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>⚠️ Este conocimiento puede protegerte… o dejarte vulnerable</h1>
+<h1>⚠️ Este conocimiento puede protegerte... o dejarte vulnerable</h1>
 
-<p style="color:red;">⏳ Disponible por tiempo limitado</p>
+<p class="alert">⏳ Disponible por tiempo limitado</p>
 
 <!-- IMAGEN CORREGIDA -->
-<img src="https://tigrean1991-hash.github.io/portal-paranormal/Proteccion.JPG">
+<img src="proteccion.jpg" alt="Libro de protección">
 
 <div class="card">
 <h2>📜 No es un libro común…</h2>
@@ -96,9 +98,9 @@ img {
 <p>Solo personas que buscan protección real.</p>
 </div>
 
-<p style="color:#00ffc3;">🔥 Más de 100 personas ya accedieron a este contenido</p>
-
-<a class="btn" href="proteccion-pago.html">🔓 Desbloquear acceso</a>
+<a href="proteccion-pago.html" class="button">
+🔓 Desbloquear acceso
+</a>
 
 </div>
 
