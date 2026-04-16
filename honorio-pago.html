@@ -2,39 +2,77 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Pago Honorio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pago | Grimorio del Papa Honorio</title>
 
 <style>
 body{
-    font-family: Arial;
-    background:#0a0014;
-    color:white;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1b0b2a 0%, #09050f 45%, #000 100%);
+    color:#fff;
     text-align:center;
     padding:20px;
+    margin:0;
+}
+.container{
+    max-width:650px;
+    margin:0 auto;
+}
+.card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(180,100,255,.25);
+    border-radius:18px;
+    padding:26px;
+    margin-top:20px;
+}
+h1{
+    font-size:2rem;
+}
+.dato{
+    font-size:1.35rem;
+    font-weight:bold;
+    margin:14px 0;
 }
 .btn{
     display:block;
-    margin:10px auto;
-    padding:15px;
+    width:100%;
+    max-width:520px;
+    margin:16px auto;
+    padding:16px;
     background:#7b2cbf;
-    color:white;
+    color:#fff;
     text-decoration:none;
-    border-radius:10px;
+    border-radius:14px;
+    font-size:1.08rem;
+    font-weight:bold;
+}
+.btn-sec{
+    background:#51206f;
 }
 </style>
 </head>
 
 <body>
+<div class="container">
 
-<h1>Realiza tu pago</h1>
+<h1>💳 Realiza tu pago</h1>
 
-<p>Beneficiario: Ángel G.</p>
-<p>Banco: Nu México</p>
-<p>CLABE: 638180000157997507</p>
+<div class="card">
+    <p><strong>Beneficiario:</strong></p>
+    <div class="dato">Ángel G.</div>
 
-<a class="btn" href="honorio-confirmar.html">
-Ya hice la transferencia
-</a>
+    <p><strong>Banco:</strong></p>
+    <div class="dato">Nu México</div>
 
+    <p><strong>CLABE:</strong></p>
+    <div class="dato">638180000157997507</div>
+
+    <p>Pago por: <strong>Grimorio del Papa Honorio</strong></p>
+</div>
+
+<a class="btn" href="honorio-confirmar.html">Ya hice la transferencia</a>
+<a class="btn btn-sec" href="honorio.html">⬅ Volver</a>
+
+</div>
 </body>
 </html>
