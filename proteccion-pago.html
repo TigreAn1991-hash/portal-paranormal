@@ -7,50 +7,44 @@
 
 <style>
 body{
-background:#000;
-color:white;
-font-family:Arial, sans-serif;
-text-align:center;
-padding:20px;
-margin:0;
+    background:#000;
+    color:white;
+    font-family:Arial;
+    text-align:center;
 }
 
 .container{
-max-width:650px;
-margin:auto;
+    max-width:650px;
+    margin:auto;
+    padding:20px;
 }
 
-.box{
-background:#111;
-padding:25px;
-border-radius:14px;
-font-size:1.3rem;
-line-height:1.8;
-box-shadow:0 0 20px rgba(0,255,180,.2);
+.card{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
 }
 
 h1{
-font-size:2rem;
-margin-bottom:15px;
+    color:#00ffcc;
 }
 
-button{
-background:#00c853;
-padding:16px;
-border:none;
-color:white;
-border-radius:12px;
-font-size:1.2rem;
-font-weight:bold;
-width:100%;
-margin-top:20px;
-cursor:pointer;
+.btn{
+    display:block;
+    background:#00c853;
+    color:white;
+    padding:15px;
+    margin:20px auto;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 .sec{
-background:#1e1e1e;
+    background:#7b2cbf;
 }
 </style>
+
 </head>
 
 <body>
@@ -59,25 +53,28 @@ background:#1e1e1e;
 
 <h1>💰 Acceso al Grimorio</h1>
 
-<div class="box">
-<p>📘 <b>Magia de Protección y Reversión</b></p>
-<p><b>Acceso completo en PDF</b></p>
+<div class="card">
 
-<p style="font-size:1.6rem;"><b>$50 MXN</b></p>
+<p>📘 Magia de Protección y Reversión</p>
 
-<p>💳 Pago vía transferencia o depósito</p>
+<h2>$50 MXN</h2>
 
-<p><b>Cuenta:</b> 722969010267528831</p>
-<p><b>Nombre:</b> Ilse R</p>
+<p>💳 Transferencia</p>
+
+<p><strong>CLABE:</strong> 638180000157997507</p>
+<p><strong>Nombre:</strong> Ángel G</p>
+
+<p style="color:#00ffcc;">📌 Concepto: Libro</p>
+
 </div>
 
-<button onclick="location.href='proteccion-confirmar.html'">
-📩 Ya realicé el pago
-</button>
+<a class="btn" href="proteccion-confirmar.html">
+📩 Ya hice el pago
+</a>
 
-<button class="sec" onclick="location.href='proteccion.html'">
+<a class="btn sec" href="proteccion.html">
 ⬅ Volver
-</button>
+</a>
 
 </div>
 
