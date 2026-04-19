@@ -1,208 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Restaurante Las Ranas</title>
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:#111;
-      color:#fff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurante Las Ranas</title>
 
-    .wrap{
-      max-width:900px;
-      margin:0 auto;
-      background:#1a1a1a;
-      min-height:100vh;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#111;
+  color:#fff;
+}
 
-    .hero{
-      min-height:100vh;
-      background:linear-gradient(180deg,#f3b23a,#d97706);
-      color:#111;
-      text-align:center;
-      padding:24px 16px 40px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-    }
+.hero{
+  min-height:100vh;
+  background:linear-gradient(#f3b23a,#d97706);
+  text-align:center;
+  padding:20px;
+  color:#111;
+}
 
-    .logo{
-      width:150px;
-      max-width:70%;
-      border-radius:18px;
-      margin-bottom:16px;
-      box-shadow:0 8px 22px rgba(0,0,0,.18);
-      background:#fff3;
-    }
+.logo{
+  width:150px;
+  border-radius:20px;
+  margin-bottom:10px;
+}
 
-    h1{
-      margin:8px 0 10px;
-      font-size:36px;
-      line-height:1.05;
-    }
+.btn{
+  display:block;
+  margin:10px auto;
+  padding:15px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  max-width:300px;
+}
 
-    .sub{
-      font-size:18px;
-      font-weight:bold;
-      margin:0 0 20px;
-    }
+.maps{background:#fff;color:#000;}
+.menu{background:#25D366;color:#fff;}
 
-    .datos{
-      background:#00000022;
-      border-radius:16px;
-      padding:16px;
-      margin:0 auto 20px;
-      max-width:720px;
-      width:100%;
-      text-align:left;
-      color:#111;
-      font-weight:bold;
-      box-shadow:0 8px 20px rgba(0,0,0,.12);
-    }
+.section{
+  padding:20px;
+}
 
-    .datos div{
-      margin:10px 0;
-      font-size:18px;
-      line-height:1.4;
-    }
+.menu-img{
+  width:100%;
+  margin-bottom:20px;
+  border-radius:10px;
+}
 
-    .botones{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin:18px 0 0;
-      width:100%;
-    }
+.titulo{
+  font-size:22px;
+  margin:15px 0;
+  color:#ffcc00;
+  text-align:center;
+}
+</style>
 
-    .btn{
-      display:inline-block;
-      padding:16px 22px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:bold;
-      font-size:18px;
-      min-width:260px;
-      text-align:center;
-      box-shadow:0 8px 20px rgba(0,0,0,.2);
-    }
-
-    .maps{
-      background:#fff;
-      color:#111;
-    }
-
-    .menu{
-      background:#25D366;
-      color:#fff;
-    }
-
-    .section{
-      padding:24px 16px 40px;
-      background:#111;
-    }
-
-    .titulo{
-      font-size:24px;
-      margin:18px 0 12px;
-      color:#ffcc00;
-      text-align:center;
-      font-weight:bold;
-    }
-
-    .menu-img{
-      width:100%;
-      border-radius:12px;
-      margin-bottom:20px;
-      display:block;
-      box-shadow:0 8px 22px rgba(0,0,0,.25);
-    }
-
-    .pedido-final{
-      text-align:center;
-      margin-top:25px;
-    }
-
-    .pedido-final .btn{
-      min-width:280px;
-    }
-
-    footer{
-      text-align:center;
-      padding:20px;
-      font-size:14px;
-      background:#000;
-      color:#aaa;
-    }
-  </style>
 </head>
+
 <body>
-  <div class="wrap">
 
-    <div class="hero">
-      <img src="logo-ranas.JGP" class="logo" alt="Logo Las Ranas">
+<!-- PRIMERA PANTALLA -->
+<div class="hero">
 
-      <h1>🐸 Restaurante Las Ranas</h1>
-      <p class="sub">Comer aquí o envío a domicilio</p>
+<img src="logo-ranas.JPG" class="logo">
 
-      <div class="datos">
-        <div>📍 Dirección: MZA 5 LT 74, Genaro Vázquez</div>
-        <div>📞 Teléfono: 8147303097</div>
-        <div>🚚 Servicio a domicilio disponible</div>
-      </div>
+<h1>🐸 Restaurante Las Ranas</h1>
+<p>Comer aquí o envío a domicilio</p>
 
-      <div class="botones">
-        <a
-          class="btn maps"
-          href="https://maps.google.com/?q=MZA+5+LT+74,+Genaro+Vázquez"
-          target="_blank"
-        >
-          📍 Ver ubicación
-        </a>
+<p>📍 MZA 5 LT 74, Genaro Vázquez</p>
+<p>📞 8147303097</p>
 
-        <a class="btn menu" href="#menu">
-          📲 Ver menú y hacer pedido
-        </a>
-      </div>
-    </div>
+<a class="btn maps" href="https://maps.google.com/?q=MZA+5+LT+74,+Genaro+Vázquez" target="_blank">
+📍 Ver ubicación
+</a>
 
-    <div class="section" id="menu">
-      <div class="titulo">🍕 Menú de Pizzas</div>
-      <img src="menu-pizzas.jpg" class="menu-img" alt="Menú de Pizzas">
+<a class="btn menu" href="#menu">
+📲 Ver menú y hacer pedido
+</a>
 
-      <div class="titulo">🍔 Menú de Hamburguesas</div>
-      <img src="menu-hamburguesas.jpg" class="menu-img" alt="Menú de Hamburguesas">
+</div>
 
-      <div class="titulo">🌮 Menú de Tacos</div>
-      <img src="menu-tacos.jpg" class="menu-img" alt="Menú de Tacos">
+<!-- MENÚ -->
+<div class="section" id="menu">
 
-      <div class="titulo">🍹 Bebidas</div>
-      <img src="menu-bebidas.jpg" class="menu-img" alt="Bebidas">
+<div class="titulo">🍔 Menú de Hamburguesas</div>
+<img src="menu-hamburguesas.JPG" class="menu-img">
 
-      <div class="titulo">🍗 Alitas y Snacks</div>
-      <img src="menu-alitas.jpg" class="menu-img" alt="Alitas y Snacks">
+<div class="titulo">🌮 Menú de Tacos</div>
+<img src="menu-tacos.JPG" class="menu-img">
 
-      <div class="pedido-final">
-        <a
-          class="btn menu"
-          href="https://wa.me/528147303097?text=Hola,%20quiero%20hacer%20un%20pedido"
-          target="_blank"
-        >
-          📲 Hacer pedido por WhatsApp
-        </a>
-      </div>
-    </div>
+<div class="titulo">🍽 Menú Mexicano</div>
+<img src="menu-mexicano.JPG" class="menu-img">
 
-    <footer>
-      Restaurante Las Ranas © 2026
-    </footer>
+<div class="titulo">🍹 Bebidas</div>
+<img src="menu-bebidas.JPG" class="menu-img">
 
-  </div>
+</div>
+
+<!-- PEDIDOS -->
+<div class="section">
+
+<div class="titulo">🛒 Haz tu pedido</div>
+
+<button onclick="agregar('Pizza')" class="btn menu">🍕 Pizza</button>
+<button onclick="agregar('Hamburguesa')" class="btn menu">🍔 Hamburguesa</button>
+<button onclick="agregar('Tacos')" class="btn menu">🌮 Tacos</button>
+<button onclick="agregar('Alitas')" class="btn menu">🍗 Alitas</button>
+<button onclick="agregar('Refresco')" class="btn menu">🥤 Refresco</button>
+
+<p id="pedido">Nada agregado</p>
+
+<button onclick="enviarWhats()" class="btn menu">
+📲 Enviar pedido por WhatsApp
+</button>
+
+</div>
+
+<script>
+let pedido = [];
+
+function agregar(producto){
+  pedido.push(producto);
+  document.getElementById("pedido").innerText = pedido.join(", ");
+}
+
+function enviarWhats(){
+  if(pedido.length === 0){
+    alert("Agrega algo primero");
+    return;
+  }
+
+  let mensaje = "Hola quiero pedir: " + pedido.join(", ");
+  let url = "https://wa.me/528147303097?text=" + encodeURIComponent(mensaje);
+
+  window.open(url, "_blank");
+}
+</script>
+
 </body>
 </html>
