@@ -12,7 +12,6 @@ body{
   background:#111;
   color:#fff;
 }
-
 .hero{
   min-height:100vh;
   background:linear-gradient(#f3b23a,#d97706);
@@ -20,13 +19,18 @@ body{
   padding:20px;
   color:#111;
 }
-
 .logo{
   width:150px;
   border-radius:20px;
   margin-bottom:10px;
 }
-
+.portada{
+  width:100%;
+  max-width:700px;
+  border-radius:14px;
+  margin:15px auto;
+  display:block;
+}
 .btn{
   display:block;
   margin:10px auto;
@@ -34,89 +38,83 @@ body{
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
-  max-width:300px;
+  max-width:320px;
+  text-align:center;
 }
-
 .maps{background:#fff;color:#000;}
 .menu{background:#25D366;color:#fff;}
-
 .section{
   padding:20px;
 }
-
 .menu-img{
   width:100%;
   margin-bottom:20px;
   border-radius:10px;
+  display:block;
 }
-
 .titulo{
   font-size:22px;
   margin:15px 0;
   color:#ffcc00;
   text-align:center;
 }
+#pedido{
+  text-align:center;
+  font-size:18px;
+  margin:15px 0;
+}
 </style>
-
 </head>
 
 <body>
 
-<!-- PRIMERA PANTALLA -->
 <div class="hero">
+  <img src="logo-ranas.JPG" class="logo" alt="Logo Las Ranas">
 
-<img src="logo-ranas.JPG" class="logo">
+  <h1>🐸 Restaurante Las Ranas</h1>
+  <p>Comer aquí o envío a domicilio</p>
 
-<h1>🐸 Restaurante Las Ranas</h1>
-<p>Comer aquí o envío a domicilio</p>
+  <img src="portada-ranas.JPG" class="portada" alt="Portada Restaurante Las Ranas">
 
-<p>📍 MZA 5 LT 74, Genaro Vázquez</p>
-<p>📞 8147303097</p>
+  <p>📍 MZA 5 LT 74, Genaro Vázquez</p>
+  <p>📞 8147303097</p>
 
-<a class="btn maps" href="https://maps.google.com/?q=MZA+5+LT+74,+Genaro+Vázquez" target="_blank">
-📍 Ver ubicación
-</a>
+  <a class="btn maps" href="https://maps.google.com/?q=MZA+5+LT+74,+Genaro+Vázquez" target="_blank">
+    📍 Ver ubicación
+  </a>
 
-<a class="btn menu" href="#menu">
-📲 Ver menú y hacer pedido
-</a>
-
+  <a class="btn menu" href="#menu">
+    📲 Ver menú y hacer pedido
+  </a>
 </div>
 
-<!-- MENÚ -->
 <div class="section" id="menu">
+  <div class="titulo">🍔 Menú de Hamburguesas</div>
+  <img src="menu-hamburguesas.JPG" class="menu-img" alt="Menú de Hamburguesas">
 
-<div class="titulo">🍔 Menú de Hamburguesas</div>
-<img src="menu-hamburguesas.JPG" class="menu-img">
+  <div class="titulo">🌮 Menú de Tacos</div>
+  <img src="menu-tacos.JPG" class="menu-img" alt="Menú de Tacos">
 
-<div class="titulo">🌮 Menú de Tacos</div>
-<img src="menu-tacos.JPG" class="menu-img">
+  <div class="titulo">🍽 Menú Mexicano</div>
+  <img src="menu-mexicano.JPG" class="menu-img" alt="Menú Mexicano">
 
-<div class="titulo">🍽 Menú Mexicano</div>
-<img src="menu-mexicano.JPG" class="menu-img">
-
-<div class="titulo">🍹 Bebidas</div>
-<img src="menu-bebidas.JPG" class="menu-img">
-
+  <div class="titulo">🍹 Bebidas</div>
+  <img src="menu-bebidas.JPG" class="menu-img" alt="Menú de Bebidas">
 </div>
 
-<!-- PEDIDOS -->
 <div class="section">
+  <div class="titulo">🛒 Haz tu pedido</div>
 
-<div class="titulo">🛒 Haz tu pedido</div>
+  <button onclick="agregar('Hamburguesa')" class="btn menu">🍔 Hamburguesa</button>
+  <button onclick="agregar('Tacos')" class="btn menu">🌮 Tacos</button>
+  <button onclick="agregar('Comida mexicana')" class="btn menu">🍽 Comida mexicana</button>
+  <button onclick="agregar('Bebida')" class="btn menu">🍹 Bebida</button>
 
-<button onclick="agregar('Pizza')" class="btn menu">🍕 Pizza</button>
-<button onclick="agregar('Hamburguesa')" class="btn menu">🍔 Hamburguesa</button>
-<button onclick="agregar('Tacos')" class="btn menu">🌮 Tacos</button>
-<button onclick="agregar('Alitas')" class="btn menu">🍗 Alitas</button>
-<button onclick="agregar('Refresco')" class="btn menu">🥤 Refresco</button>
+  <p id="pedido">Nada agregado</p>
 
-<p id="pedido">Nada agregado</p>
-
-<button onclick="enviarWhats()" class="btn menu">
-📲 Enviar pedido por WhatsApp
-</button>
-
+  <button onclick="enviarWhats()" class="btn menu">
+    📲 Enviar pedido por WhatsApp
+  </button>
 </div>
 
 <script>
@@ -135,7 +133,6 @@ function enviarWhats(){
 
   let mensaje = "Hola quiero pedir: " + pedido.join(", ");
   let url = "https://wa.me/528147303097?text=" + encodeURIComponent(mensaje);
-
   window.open(url, "_blank");
 }
 </script>
