@@ -37,12 +37,13 @@ select, input{
   color:white;
   padding:15px;
   border-radius:12px;
-  text-decoration:none;
   display:block;
   width:90%;
   max-width:400px;
   margin:20px auto;
   font-size:18px;
+  border:none;
+  cursor:pointer;
 }
 
 .total{
@@ -71,13 +72,13 @@ select, input{
 
 <input id="origen" placeholder="Estoy en (ej: Smart García)">
 <input id="destino" placeholder="Voy a (ej: La Mercedes)">
-<input id="ubicacion" placeholder="Pega aquí tu ubicación de Google Maps">
+<input id="ubicacion" placeholder="Pega aquí tu ubicación (Google Maps o WhatsApp)">
 
 <input id="personas" type="number" placeholder="Número de personas" oninput="calcular()">
 
 <div class="total" id="total">Total: $0</div>
 
-<a class="btn" onclick="enviar()">Enviar pedido por WhatsApp</a>
+<button class="btn" onclick="enviar()">Enviar pedido por WhatsApp</button>
 
 </div>
 
@@ -108,7 +109,7 @@ function enviar(){
   "Personas: "+personas+"%0A"+
   "Total: $"+total;
 
-  window.open("https://wa.me/524791950206?text="+mensaje);
+  window.location.href = "https://wa.me/524791950206?text="+mensaje;
 }
 
 </script>
