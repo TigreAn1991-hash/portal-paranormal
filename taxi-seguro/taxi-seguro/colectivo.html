@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Colectivo Taxi Seguro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  font-family: Arial;
+  background:#0f0f0f;
+  color:white;
+  text-align:center;
+  margin:0;
+}
+
+.container{
+  padding:20px;
+}
+
+h1{
+  color:#2ecc71;
+}
+
+select, input{
+  width:90%;
+  max-width:400px;
+  padding:12px;
+  margin:10px auto;
+  border-radius:10px;
+  border:none;
+  display:block;
+}
+
+.btn{
+  background:#27ae60;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  text-decoration:none;
+  display:block;
+  width:90%;
+  max-width:400px;
+  margin:20px auto;
+  font-size:18px;
+}
+
+.total{
+  font-size:20px;
+  margin-top:10px;
+  color:#f1c40f;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚐 Colectivo</h1>
+
+<select id="direccion">
+<option>García → Santa Catarina</option>
+<option>Santa Catarina → García</option>
+</select>
+
+<select id="ruta">
+<option>Avenida Colosio</option>
+<option>Heberto Castillo / Carretera Saltillo</option>
+</select>
+
+<input id="origen" placeholder="Estoy en (ej: Smart García)">
+<input id="destino" placeholder="Voy a (ej: La Mercedes)">
+<input id="ubicacion" placeholder="Pega aquí tu ubicación de Google Maps">
+
+<input id="personas" type="number" placeholder="Número de personas" oninput="calcular()">
+
+<div class="total" id="total">Total: $0</div>
+
+<a class="btn" onclick="enviar()">Enviar pedido por WhatsApp</a>
+
+</div>
+
+<script>
+
+function calcular(){
+  let personas = document.getElementById("personas").value;
+  let total = personas * 60;
+  document.getElementById("total").innerText = "Total: $" + total;
+}
+
+function enviar(){
+  let direccion = document.getElementById("direccion").value;
+  let ruta = document.getElementById("ruta").value;
+  let origen = document.getElementById("origen").value;
+  let destino = document.getElementById("destino").value;
+  let ubicacion = document.getElementById("ubicacion").value;
+  let personas = document.getElementById("personas").value;
+  let total = personas * 60;
+
+  let mensaje = "Nuevo pedido Taxi Seguro%0A"+
+  "Servicio: Colectivo%0A"+
+  "Dirección: "+direccion+"%0A"+
+  "Ruta: "+ruta+"%0A"+
+  "Estoy en: "+origen+"%0A"+
+  "Voy a: "+destino+"%0A"+
+  "Ubicación: "+ubicacion+"%0A"+
+  "Personas: "+personas+"%0A"+
+  "Total: $"+total;
+
+  window.open("https://wa.me/524791950206?text="+mensaje);
+}
+
+</script>
+
+</body>
+</html>
