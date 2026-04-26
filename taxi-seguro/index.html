@@ -1,102 +1,101 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Taxi Seguro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Taxi Seguro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(#000000, #0f0f0f);
-      color: white;
-      text-align: center;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('portada.PNG');
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
 
-    header {
-      padding: 40px 20px 10px;
-    }
+header {
+  padding: 40px 20px 10px;
+}
 
-    h1 {
-      font-size: 34px;
-      margin: 0;
-      color: #f1c40f;
-    }
+h1 {
+  font-size: 34px;
+  margin: 0;
+  color: #f1c40f;
+}
 
-    p {
-      font-size: 16px;
-      color: #ccc;
-      margin-top: 10px;
-    }
+p {
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 10px;
+}
 
-    .container {
-      padding: 20px;
-    }
+.container {
+  padding: 20px;
+}
 
-    .btn {
-      display: block;
-      width: 90%;
-      max-width: 420px;
-      margin: 14px auto;
-      padding: 18px;
-      border-radius: 16px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      color: white;
-    }
+.btn {
+  display: block;
+  width: 90%;
+  max-width: 420px;
+  margin: 14px auto;
+  padding: 18px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
 
-    .colectivo {
-      background: linear-gradient(45deg, #27ae60, #2ecc71);
-    }
+.colectivo {
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
 
-    .taxi {
-      background: linear-gradient(45deg, #2980b9, #3498db);
-    }
+.taxi {
+  background: linear-gradient(45deg, #2980b9, #3498db);
+}
 
-    .interno1 {
-      background: linear-gradient(45deg, #8e44ad, #9b59b6);
-    }
+.interno1 {
+  background: linear-gradient(45deg, #8e44ad, #9b59b6);
+}
 
-    .interno2 {
-      background: linear-gradient(45deg, #d35400, #e67e22);
-    }
+.interno2 {
+  background: linear-gradient(45deg, #d35400, #e67e22);
+}
 
-    .registro1 {
-      background: linear-gradient(45deg, #16a085, #1abc9c);
-    }
+.registro1 {
+  background: linear-gradient(45deg, #16a085, #1abc9c);
+}
 
-    .registro2 {
-      background: linear-gradient(45deg, #8e5c00, #d68910);
-    }
+.registro2 {
+  background: linear-gradient(45deg, #8e5c00, #d68910);
+}
 
-    .subtext {
-      font-size: 13px;
-      display: block;
-      margin-top: 5px;
-      color: #eee;
-      font-weight: normal;
-    }
+.subtext {
+  font-size: 13px;
+  display: block;
+  margin-top: 5px;
+  color: #eee;
+  font-weight: normal;
+}
 
-    .section-title {
-      margin-top: 30px;
-      font-size: 16px;
-      color: #aaa;
-    }
+.section-title {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #aaa;
+}
 
-    .footer {
-      margin-top: 30px;
-      padding: 20px;
-      color: #aaa;
-      font-size: 14px;
-    }
-
-  </style>
+.footer {
+  margin-top: 30px;
+  padding: 20px;
+  color: #aaa;
+  font-size: 14px;
+}
+</style>
 </head>
 
-<body style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('portada.PNG'); background-size: cover;">
+<body>
 
 <header>
   <h1>🚖 Taxi Seguro</h1>
@@ -105,11 +104,13 @@
 
 <div class="container">
 
-  <a class="btn colectivo" href="https://wa.me/524791950206?text=Hola,%20quiero%20un%20colectivo%20de%20García%20a%20Santa">
+  <!-- 🔥 ESTE YA VA A LA NUEVA PANTALLA -->
+  <a class="btn colectivo" href="colectivo.html">
     🚐 Colectivo García ↔ Santa
     <span class="subtext">Viaje compartido desde $60</span>
   </a>
 
+  <!-- LOS DEMÁS SIGUEN A WHATSAPP -->
   <a class="btn taxi" href="https://wa.me/524791950206?text=Hola,%20necesito%20un%20taxi%20de%20García%20a%20Santa">
     🚕 Taxi García ↔ Santa
     <span class="subtext">Viaje privado inmediato</span>
